@@ -38,8 +38,8 @@ function Feedcard() {
     const [commentsError, setCommentError] = useState({})
     const [imageLoaded, setImageLoaded] = useState({})
     const [imageFailed, setImageFailed] = useState({})
-    const [replies,setReplies] = useState(false)
-   
+    const [replies, setReplies] = useState(false)
+
 
     // POST method
     // comment on a specific post
@@ -155,7 +155,7 @@ function Feedcard() {
         }
     }
 
-   
+
 
     useEffect(() => {
         async function recievepins() {
@@ -282,29 +282,29 @@ function Feedcard() {
     }
 
     useEffect(() => {
-    const checkWidth = () => {
-        const feed = document.querySelector('.Feed');
-        const card = document.querySelector('.Feedcardext');
-        const content = document.querySelector('.postinside');
+        const checkWidth = () => {
+            const feed = document.querySelector('.Feed');
+            const card = document.querySelector('.Feedcardext');
+            const content = document.querySelector('.postinside');
 
-        console.table({
-            feed: feed?.getBoundingClientRect().width,
-            card: card?.getBoundingClientRect().width,
-            content: content?.getBoundingClientRect().width
-        });
+            console.table({
+                feed: feed?.getBoundingClientRect().width,
+                card: card?.getBoundingClientRect().width,
+                content: content?.getBoundingClientRect().width
+            });
 
-        console.table(
-    [...document.querySelectorAll('.Feedcardext')].map(card => ({
-        id: card.dataset.noteId,
-        width: card.getBoundingClientRect().width,
-        scrollWidth: card.scrollWidth,
-        clientWidth: card.clientWidth
-    }))
-);
-    };
+            console.table(
+                [...document.querySelectorAll('.Feedcardext')].map(card => ({
+                    id: card.dataset.noteId,
+                    width: card.getBoundingClientRect().width,
+                    scrollWidth: card.scrollWidth,
+                    clientWidth: card.clientWidth
+                }))
+            );
+        };
 
-    checkWidth();
-}, [backnote]);
+        checkWidth();
+    }, [backnote]);
     return (
         <>
 
@@ -328,7 +328,7 @@ function Feedcard() {
                         dataLength={backnote.length}
                         next={() => recieve_notes(page + 1)}
                         hasMore={hasMore}
-                        
+
                         loader={
                             <div className="feed-pagination-loader">
                                 <FeedCardSkeleton />
@@ -336,40 +336,40 @@ function Feedcard() {
                         }
                     >
                         <>
-                        {backnote.map((note) => (
-                            <div className="Feedcardext" key={note.id}  data-note-id={note.id}>
-                                <div className='profileimg'><img src={`http://127.0.0.1:8000${note.profilepicture}`} alt="profile" id='profilepic' /></div>
-                                <motion.img src={pin} alt="toppin" className='toppin' initial={{ x: -10, y: 30, opacity: 0 }} animate={pinned.includes(note.id) ? { x: -2, y: -1, opacity: 1 } : { x: 0, y: 0, opacity: 0 }} />
-                                <motion.div className="postinside" whileHover={{ y: -5, scale: 1 }} transition={{ ease: "easeOut" }}>
-                                    <div className='headings'>
-                                        <h3>{note.ghost_name}</h3>
-                                    </div>
-                                    <div className="postcontent" dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(note.note || "") }}>
-                                    </div>
-                                    <div>
-                                        {note.Post && (
-                                            <img src={note.post} alt="post" id='postimage' />
-                                        )}
-                                    </div>
-                                    <div className="likesdiv">
-                                        <div className='actionicons'>
-                                            <motion.div className='likes' onClick={() => togglelike(note.id, note.is_liked)} whileTap={{ y: 3, scale: 0.5 }}>
-                                                <HeartIcon size={30} color={note.is_liked ? "#2bc1fb" : "#555"} weight={note.is_liked ? "fill" : "regular"} ></HeartIcon>
-                                                <p>{note.likes ?? 0}</p>
-                                            </motion.div>
-                                            <motion.div className='comment' onClick={() => openComments(note.id)}>
-                                                <ChatIcon size={30} ></ChatIcon>
-                                                <p>{commentcount?.[note.id] ?? 0}</p>
-                                            </motion.div>
-                                            <motion.div className='pin' onClick={() => togglepin(note.id)} >
-                                                <PushPinIcon size={30} color={pinned.includes(note.id) ? "red" : "#555"} weight={pinned.includes(note.id) ? "fill" : "regular"}  ></PushPinIcon>
-                                            </motion.div>
+                            {backnote.map((note) => (
+                                <div className="Feedcardext" key={note.id} >
+                                    <div className='profileimg'><img src={`http://127.0.0.1:8000${note.profilepicture}`} alt="profile" id='profilepic' /></div>
+                                    <motion.img src={pin} alt="toppin" className='toppin' initial={{ x: -10, y: 30, opacity: 0 }} animate={pinned.includes(note.id) ? { x: -2, y: -1, opacity: 1 } : { x: 0, y: 0, opacity: 0 }} />
+                                    <motion.div className="postinside" whileHover={{ y: -5, scale: 1 }} transition={{ ease: "easeOut" }}>
+                                        <div className='headings'>
+                                            <h3>{note.ghost_name}</h3>
                                         </div>
-                                    </div>
+                                        <div className="postcontent" dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(note.note || "") }}>
+                                        </div>
+                                        <div>
+                                            {note.Post && (
+                                                <img src={note.post} alt="post" id='postimage' />
+                                            )}
+                                        </div>
+                                        <div className="likesdiv">
+                                            <div className='actionicons'>
+                                                <motion.div className='likes' onClick={() => togglelike(note.id, note.is_liked)} whileTap={{ y: 3, scale: 0.5 }}>
+                                                    <HeartIcon size={30} color={note.is_liked ? "#2bc1fb" : "#555"} weight={note.is_liked ? "fill" : "regular"} ></HeartIcon>
+                                                    <p>{note.likes ?? 0}</p>
+                                                </motion.div>
+                                                <motion.div className='comment' onClick={() => openComments(note.id)}>
+                                                    <ChatIcon size={30} ></ChatIcon>
+                                                    <p>{commentcount?.[note.id] ?? 0}</p>
+                                                </motion.div>
+                                                <motion.div className='pin' onClick={() => togglepin(note.id)} >
+                                                    <PushPinIcon size={30} color={pinned.includes(note.id) ? "red" : "#555"} weight={pinned.includes(note.id) ? "fill" : "regular"}  ></PushPinIcon>
+                                                </motion.div>
+                                            </div>
+                                        </div>
 
-                                </motion.div>
-                            </div>
-                       ))} </>
+                                    </motion.div>
+                                </div>
+                            ))} </>
                     </InfiniteScroll>
 
                 )
@@ -409,7 +409,7 @@ function Feedcard() {
                                 hasMore={commentHasMore[commentpanel] ?? false}
                                 loader={
                                     <div className="feed-pagination-loader">
-                                        <CommentSkeleton/>
+                                        <CommentSkeleton />
                                     </div>
                                 }>
                                 {(comments?.[commentpanel] ?? []).length === 0 ? (
@@ -419,6 +419,7 @@ function Feedcard() {
                                 ) : (
                                     (comments[commentpanel] || []).map((comment) => (
                                         <motion.div className='commentdiv' key={comment.id} whileHover={{ y: -2 }}>
+                                            <img src={sampleprofile} id='Commentsprofile' />
                                             <div className='commentbox'>
                                                 <div id='commentuser'>
                                                     <h3>{comment.username}</h3>
@@ -428,11 +429,11 @@ function Feedcard() {
                                             <motion.div className='commentlike'>
                                                 <HeartIcon size={30} color={comment.is_liked ? "#2bc1fb" : "#555"} weight={comment.is_liked ? "fill" : "regular"} onClick={() => togglecommentlike(commentpanel, comment.id, comment.is_liked)} whileTap={{ y: 3, scale: 1 }} ></HeartIcon>
                                                 <p>{comment.likes}</p>
-                                                <ChatIcon size={30} onClick={()=>setReplies(e=>!e)} ></ChatIcon>
+                                                <ChatIcon size={30} onClick={() => setReplies(e => !e)} ></ChatIcon>
                                                 <p>0</p>
                                             </motion.div>
                                             {
-                                                replies &&(
+                                                replies && (
                                                     <div className='repliesbox'>
                                                         <h4>Disscussions</h4>
                                                         <div className='disscussionbox'>
@@ -442,14 +443,16 @@ function Feedcard() {
                                                             <div className='disscusscontent'>
                                                                 <p>this is reply to use comment</p>
                                                             </div>
-                                                            <div className='disscusslikes'>
-                                                                <HeartIcon size={25}></HeartIcon>
-                                                                <p>0</p>
-                                                                <ChatIcon size={25}></ChatIcon>
-                                                                <p>0</p>
-                                                            </div>
+
+                                                        </div>
+                                                        <div className='disscusslikes'>
+                                                            <HeartIcon size={25}></HeartIcon>
+                                                            <p>0</p>
+                                                            <ChatIcon size={25}></ChatIcon>
+                                                            <p>0</p>
                                                         </div>
                                                     </div>
+                                                    
                                                 )
                                             }
                                         </motion.div>
@@ -466,7 +469,6 @@ function Feedcard() {
                         <motion.div whileTap={{ x: 10, y: -10, opacity: 0 }} onClick={() => sendcomments(commentpanel)}><PaperPlaneTiltIcon size={25} id='sendcommenticon' ></PaperPlaneTiltIcon></motion.div>
                         <ImageSquareIcon size={25} id='sendcommenticon'></ImageSquareIcon>
                     </motion.div>
-
                 </div>
             )}
         </>
