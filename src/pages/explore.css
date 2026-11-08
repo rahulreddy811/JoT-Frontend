@@ -1,0 +1,21 @@
+.outerexplore{
+
+    width: 100%;
+    min-height: 100vh;
+    padding:1px 0 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.innerbox{
+    height: 100%;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.innerbox h1{
+    font-size: 60px;
+}

@@ -1,0 +1,330 @@
+html{
+    overflow-x: hidden;
+}
+.Feedcardext {
+    position: relative;
+    width: 100%;
+    max-width: 700px;
+    min-width: 0;
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+
+    padding: 7px;
+    margin-top: 20px;
+
+    border: 2px solid black;
+    flex-shrink: 0;
+}
+
+.profileimg {
+    flex: 0 0 60px;
+    width: 60px;
+    min-width: 0;
+}
+
+#profilepic {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin: 0;
+}
+
+
+.headings {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
+}
+.postinside {
+    flex: 1;
+    width: auto;
+    min-width: 0;
+    box-sizing: border-box;
+    padding: 0 10px 10px;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.postcontent {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    overflow-wrap: anywhere;
+}
+
+.postinside img {
+    max-width: 100%;
+    height: auto;
+}
+
+.likesdiv{
+    display: flex;
+    justify-content: flex-end;
+    border: 2px solid black;
+    margin-top: 10px;
+    height: 30px;
+    padding: 2px;
+}
+
+.actionicons{ 
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.actionicons p{ 
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.likes{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    user-select: none;
+    cursor: pointer;
+}
+
+.comment{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    user-select: none;
+    cursor: pointer;
+}
+
+.pin{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    user-select: none;
+    cursor: pointer;
+}
+
+.toppin{
+    position: relative;
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    top: 0;
+    right: 10px;
+    z-index: 2;
+}
+
+
+
+
+.commentdivhead{
+    display: flex;
+    gap: 20px;
+}
+
+.commentlike{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 5px;
+    gap: 15px;
+    cursor: pointer;
+}
+
+.commentlike p{
+    margin-top: 5px;
+    user-select: none;
+}
+
+#sendcommenticon{
+    cursor: pointer;
+}
+
+.commentsouter {
+    position: fixed;
+    border: 2px solid black;
+    height: 100%;
+    height: 550px;
+    top: 220px;
+    right: 180px;
+    bottom: 24px;
+    width: 400px;
+    z-index: 1000;
+    padding: 10px;
+
+}
+
+.commentbox {
+    width: 100%;
+    padding: 5px;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    box-sizing: border-box;
+    flex-shrink: 0;
+}
+
+
+.commentspanel {
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    max-height: 410px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 0;
+}
+
+#commentinput {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    gap: 10px;
+    margin-top: 2px;
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+
+#commentinput input {
+    width: 80%;
+    height: 50%;
+    border: 2px solid black;
+    height: 38px;
+    padding: 0 10px;
+    border-radius: 20px;
+    margin-bottom:2px ;
+    outline: none;
+}
+
+#sendcommenticon {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    height: 100%;
+    max-height: 100px;
+    margin-top: 10px;
+}
+
+.commentspanel::-webkit-scrollbar{
+    display: none;
+}
+
+
+@media (max-width: 600px) {
+    .commentsouter {
+        top: auto;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 80vh;
+    }
+}
+
+.skeleton-card {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    background: transparent;
+    width: 100%;
+    max-width: 700px;
+    min-width: 0;
+    margin: 20px 0 10px;
+    box-sizing: border-box;}
+
+.skeleton-actions {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-top: 18px;
+}
+
+.feed-pagination-loader {
+    margin: 16px 0;
+}
+
+.feed-empty {
+    padding: 30px 15px;
+    text-align: center;
+}
+
+.postimage-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    aspect-ratio: 3 / 2;
+    overflow: hidden;
+}
+
+.postimage-wrapper #postimage {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.image-error {
+    padding: 20px;
+    text-align: center;
+}
+
+.commentdiv {
+    margin-bottom: 12px;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    background: transparent;
+}
+
+.commentbox{
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    background: transparent;
+}
+
+.repliesbox{
+    border: 2px solid black;
+    height: 300px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.disscussionbox{
+    border: 2px solid black;
+    height: 120px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.disscussusername{
+    padding-top: 10px;
+}
+
+
+.disscusslikes{
+    border: 2px solid black;
+    height: 35px;
+    padding-right: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.disscusslikes p{
+    padding-top: 20px;
+    font-size: 20px;
+}

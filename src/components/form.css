@@ -1,0 +1,268 @@
+.formcont{
+    display: flex;
+    flex-direction: row;
+    height: auto ;
+    max-height: 550px;
+    border-radius: 15px;
+    background-color: rgb(31, 30, 30);
+    width: 100%;
+    max-width: 650px;
+    padding: 5px;
+    color: white;
+}
+
+.formright{
+    flex: 1;
+    padding :10px;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    flex-direction: column;
+}
+
+.formleft{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    flex-direction: row;
+    border: 2px solid white;
+    border-radius: 15px;
+    width: 50%;
+    min-width: 200px;
+    padding: 8px;
+    color: white;
+}
+
+form{
+    margin: 20px;
+}
+
+form input{
+    margin-left: 10px;
+    width: 100%;
+    max-width: 220px;
+    height: 35px;
+    margin-top: 20px;
+    border-radius: 20px;
+    padding-left: 20px;
+    font-size: 15px;
+    outline: none; 
+    border: 2px solid black;
+    margin-right: 50%;
+}
+
+form h1{
+    font-size: 40px;
+    color: white;
+}
+
+.buttoncont{
+    width: fit-content;
+    margin-left: 70%;
+    margin-top: 12px;
+    width: 100%; 
+}
+
+.gamenums{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 10px;
+
+}
+
+.gamenums input{
+    height: 40px;
+    width: 40px;
+    font-size: 30px;
+    text-align: center;
+    outline: none;
+    user-select: none;
+}
+
+.gamecont button{
+    position: relative;
+    left: 55%;
+    top: 20px;
+    height: 40px;
+    margin-top: 20px;
+    margin-right: 50px;
+    width: 80px;
+    border: 2px solid black;
+    border-radius: 50px;
+    background-color: white;
+}
+
+.gamecont h1{
+    position: relative;
+    left: 10px;
+    color: white;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+
+.gameoutput{
+    margin-top: 30px;
+}
+
+#authbtn{
+    height: 40px;
+    margin-top: 20px;
+    width: 70px;
+    border: 2px solid black;
+    border-radius: 50px;
+    background-color: white;
+    cursor: pointer;
+}
+
+#gamebtn{
+    height: 40px;
+    margin-top: 20px;
+    width: 150px;
+    border: 2px solid black;
+    border-radius: 50px;
+    background-color: white;
+}
+
+@media (max-width: 375px) and (max-height: 700px) {
+     .formcont{
+       width: 100%;
+       max-width: 50px;
+       margin-inline: auto;
+       
+    }
+
+    .formleft{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    flex-direction: row;
+    border: 2px solid white;
+    border-radius: 15px;
+    width: 50%;
+    min-width: 100px;
+    padding: 8px;
+    color: white;
+    }
+}
+
+@media  (min-width: 320px) and (max-width: 480px) {
+    .formcont{
+       width: 100%;
+       max-width: 390px;
+       margin-inline: auto;
+    }
+    form{
+    margin: 2px
+    }
+    form input{
+    width: 100%;
+    max-width: 150px;
+    height: 35px;
+    margin-top: 20px;
+    border-radius: 20px;
+    font-size: 15px;
+    outline: none; 
+    box-sizing: border-box;
+    border: 2px solid black;
+    }
+    form h1{
+    font-size: 35px;
+    color: white;
+}
+.buttoncont{
+    width: fit-content;
+    margin-left: 5px;
+    margin-top: 5px;
+    width: 100%; 
+    max-width: 150px ;
+    display: flex;
+   
+    align-items: center;
+    justify-content: flex-end;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 360px) {
+    .formcont {
+        width: 100%;
+        max-width: 350px;
+        padding-inline: 5px;
+        box-sizing: border-box;
+    }
+
+    form {
+        margin: 3px;
+    }
+
+    form h1{
+    font-size: 30px;
+    color: white;
+    }
+
+    form input {
+        max-width: 150px;
+        height: 34px;
+        font-size: 14px;
+    }
+
+    .buttoncont {
+        max-width: 130px;
+        margin-left: 5px;
+    }
+
+    .formleft{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    flex-direction: row;
+    border: 2px solid white;
+    border-radius: 15px;
+    width: 50%;
+    min-width: 100px;
+    padding: 8px;
+    color: white;
+    }
+
+    #authbtn{
+    height: 30px;
+    margin-top: 20px;
+    width: 70px;
+    border: 2px solid black;
+    border-radius: 50px;
+    background-color: white;
+}
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .formcont {
+        width: 100%;
+        max-width: 550px;
+
+    }
+
+    form {
+        margin: 10px;
+    }
+
+    form input {
+        max-width: 200px;
+        height: 38px;
+        font-size: 15px;
+    }
+
+    .buttoncont {
+        max-width: 160px;
+    }
+}

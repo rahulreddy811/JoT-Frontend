@@ -1,0 +1,14 @@
+.outerContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    height: 90vh;
+    margin: 0;
+    padding: 1px 0 0;
+    box-sizing: border-box;
+}
+
+.outerContainer p {
+    margin-top: 0;
+}

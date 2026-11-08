@@ -1,0 +1,57 @@
+.navbardiv{
+    height: 60px;  
+    padding-left: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 20px;
+    padding-left: 10px;
+    
+}
+
+.navbardiv.morning{
+    background-color: #d2deeb;
+    color: #26394c;
+    border-bottom-color: #c3d1df;
+}
+
+.navbardiv.afternoon{
+    background-color: #dce4ed;
+    color: #263445;
+    border-bottom-color: #cbd5e1;
+}
+
+.navbardiv.evening{
+    background-color: #303247;
+    color: #f0eff5;
+    border-bottom-color: #414359;
+}
+
+.navbardiv.night{
+    background-color: #171a23;
+    color: #e5e7eb;
+    border-bottom-color: #292d38;
+}
+
+
+#profile{
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    object-fit: cover;
+    user-select: none;
+    -webkit-user-drag: none;
+    cursor: pointer;
+}
+
+#paperplane{
+    height: 70px;
+    user-select: none;
+    -webkit-user-drag: none;
+    cursor: pointer;
+}
+
+.navbardiv h2{
+   user-select: none;
+   -webkit-user-drag: none;
+}

@@ -1,0 +1,135 @@
+
+html, body, #root {
+    margin: 0;
+    width: 100%;
+    min-height: 100%;
+}
+
+body{
+    overflow-x: hidden; 
+}
+.herosection{
+    position: relative;
+    background-color: black;
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100svh;
+    display:  flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.centerdiv{
+    position: relative;
+    color: white;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0;
+}
+
+.headings {
+   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-left: 5px;
+}
+
+.headings h1 {
+    font-size: clamp(100px, 14vw, 300px);
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    letter-spacing: 7rem;
+    margin-left: 15rem;
+}
+
+.subheading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.subheading p{
+   font-size:clamp(16px,2.5vw,30px);
+   margin-right: 10px;
+}
+
+
+#homepagebtn{
+    min-height: 44px;
+    width: 150px;
+    font-size: 18px;
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+    cursor: pointer;
+}
+
+.btndiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.flightclass{
+    width: 200px;
+    height: 200px;
+    margin: 50px auto 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.flightclass img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .herosection {
+        padding: 20px 12px;
+    }
+
+    .centerdiv {
+        width: 100%;
+    }
+
+    .headings {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 4px;
+        width: 100%;
+        overflow: visible;
+    }
+
+    .headings h1 {
+        font-size: clamp(55px, 16vw, 80px);
+        line-height: 1;
+        margin: 0;
+        padding: 0;
+        flex: 0 0 auto;
+        letter-spacing: normal;
+    }
+
+    .subheading p {
+        font-size: clamp(15px, 4vw, 18px);
+    }
+
+    .flightclass {
+        margin: 35px auto 0;
+    }
+
+    .flightclass img {
+        width: min(140px, 35vw);
+        height: auto;
+    }
+}

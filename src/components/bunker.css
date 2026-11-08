@@ -1,0 +1,24 @@
+.bunkerentrance{
+    
+    height: 550px;
+}
+
+#accesstype{
+    display: flex;
+    flex-direction: row;
+    height: 40px;
+    align-items: center;
+    justify-content: space-around;
+    border: 2px solid black;
+
+}
+
+#accesstype p{
+    cursor: pointer;
+    user-select: none;
+}
+
+#content{
+    margin-top: 10px;
+    padding: 10px;
+}

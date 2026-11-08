@@ -1,0 +1,33 @@
+.accessform{
+    
+    padding: 5px;
+    flex-direction: column;
+    display: flex;
+    height: 400px;
+}
+
+.accessform h1{
+    user-select: none;
+}
+
+.accessform  p{
+    user-select: none;
+}
+
+#formaccess{
+    display: flex;
+    border: 2px solid red;
+}
+
+#form{
+    display: flex;
+    flex-direction: column;
+    margin-right: 30px;
+}
+
+#form button{
+    border: 2px solid black;
+    width: 80px;
+    margin-left: 170px;
+    margin-top: 20px;
+}
