@@ -1,21 +1,18 @@
 html{
     overflow-x: hidden;
 }
+
 .Feedcardext {
     position: relative;
     width: 100%;
     max-width: 700px;
     min-width: 0;
     box-sizing: border-box;
-
     display: flex;
     align-items: flex-start;
     gap: 15px;
-
     padding: 7px;
     margin-top: 20px;
-
-    border: 2px solid black;
     flex-shrink: 0;
 }
 
@@ -32,7 +29,6 @@ html{
     margin: 0;
 }
 
-
 .headings {
     display: flex;
     align-items: flex-start;
@@ -40,6 +36,7 @@ html{
     gap: 10px;
     width: 100%;
 }
+
 .postinside {
     flex: 1;
     width: auto;
@@ -48,6 +45,7 @@ html{
     padding: 0 10px 10px;
     position: relative;
     box-sizing: border-box;
+    border: 2px solid black;
 }
 
 .postcontent {
@@ -123,8 +121,6 @@ html{
 }
 
 
-
-
 .commentdivhead{
     display: flex;
     gap: 20px;
@@ -151,18 +147,18 @@ html{
     position: fixed;
     border: 2px solid black;
     height: 100%;
-    height: 550px;
+    height: 600px;
     top: 220px;
-    right: 180px;
+    right: 90px;
     bottom: 24px;
-    width: 400px;
+    width: 500px;
     z-index: 1000;
     padding: 10px;
 
 }
 
 .commentbox {
-    width: 100%;
+    width: 400px;
     padding: 5px;
     border-radius: 12px;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
@@ -179,7 +175,7 @@ html{
     flex: 1;
     width: 100%;
     height: 100%;
-    max-height: 410px;
+    max-height: 470px;
     overflow-y: auto;
     display: flex;
     flex-direction: column;
@@ -241,9 +237,27 @@ html{
     width: 100%;
     max-width: 700px;
     min-width: 0;
-    margin: 20px 0 10px;
-    box-sizing: border-box;}
+    flex-shrink: 0;
+    box-sizing: border-box;
+}
 
+.feed-pagination-loader {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    align-self: stretch;
+    margin: 16px 0;
+}
+
+.feed-pagination-loader .skeleton-card {
+    width: 100%;
+    max-width: 700px;
+    flex-shrink: 0;
+    box-sizing: border-box;
+}
 .skeleton-actions {
     display: flex;
     align-items: center;
@@ -287,15 +301,8 @@ html{
     background: transparent;
 }
 
-.commentbox{
-    border: none !important;
-    outline: none !important;
-    box-shadow: none !important;
-    background: transparent;
-}
 
 .repliesbox{
-    border: 2px solid black;
     height: 300px;
     padding-left: 10px;
     padding-right: 10px;
@@ -304,6 +311,7 @@ html{
 .disscussionbox{
     border: 2px solid black;
     height: 120px;
+    border-radius: 10px;
     padding-bottom: 20px;
     padding-left: 10px;
     padding-right: 10px;
@@ -315,7 +323,6 @@ html{
 
 
 .disscusslikes{
-    border: 2px solid black;
     height: 35px;
     padding-right: 5px;
     display: flex;
@@ -327,4 +334,11 @@ html{
 .disscusslikes p{
     padding-top: 20px;
     font-size: 20px;
+}
+
+#Commentsprofile{
+    height:50px;
+    width: 50px;
+    border:2px solid black;
+    border-radius: 50%;
 }
